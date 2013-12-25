@@ -1,0 +1,25 @@
+{
+    "require": {
+        "zendframework/zf1-extras": "dev-master",
+        "symfony/console": "2.5.*@dev"
+    },
+    "repositories": [
+        {
+            "type":"package",
+            "package": {
+                "name": "zendframework/zf1-extras",
+                "version":"master",
+                "source": {
+                    "url": "https://github.com/zendframework/zf1-extras",
+                    "type": "git",
+                    "reference":"master"
+                }
+            }
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "Com\\": "src/"
+        }
+    }
+}
