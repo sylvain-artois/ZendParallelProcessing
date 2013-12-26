@@ -1,2 +1,6 @@
 vendor/*
 !vendor/.gitignore
+
+.idea
+
+nbproject

@@ -1,6 +1,7 @@
 {
     "require": {
         "zendframework/zf1-extras": "dev-master",
+        "mazelab/zendframework1-min": "dev-master",
         "symfony/console": "2.5.*@dev"
     },
     "repositories": [
@@ -19,7 +20,9 @@
     ],
     "autoload": {
         "psr-0": {
-            "Com\\": "src/"
+            "Com\\": "src/",
+            "ZendX" : "vendor/zendframework/zf1-extras/library",
+            "Zend": "vendor/mazelab/zendframework1-min/library"
         }
     }
 }

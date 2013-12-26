@@ -1,4 +1,6 @@
 <?php
+namespace Com\Thelab;
+
 /**
  * 
  */
@@ -7,7 +9,7 @@ class FileParser extends ZendX_Console_Process_Unix
     const VAR_NAME_FILE_PATH = "FILE_PATH";
     const VAR_NAME_ETAB_NAME = "ETAB_NAME";
     const VAR_NAME_PROCESS_ERROR = "PROCESS_ERROR";
-	
+
     /**
      * @var string
      */
@@ -43,7 +45,7 @@ class FileParser extends ZendX_Console_Process_Unix
         $this->loadFile( $this->_filePath );
         $sName = $this->getName();
 
-        if ($sName === "") {
+        if( $sName === "" ) {
             $this->setVariable(self::VAR_NAME_PROCESS_ERROR, "Etab name is empty");
             return;
         }
@@ -83,24 +85,28 @@ class FileParser extends ZendX_Console_Process_Unix
     
     public function isRunning() {
         $this->_isRunning = (0 == pcntl_waitpid( $this->getPid(), $status, WNOHANG));
-	return $this->_isRunning;
+	    return $this->_isRunning;
     }
-    
+
     /**
-    *
-    * @param int $errno
-    * @param string $errstr
-    * @param string $errfile
-    * @param int $errline
-    * @return void|boolean
-    */
+     * set_error_handler callback
+     *
+     * @param int $errno
+     * @param string $errstr
+     * @param string $errfile
+     * @param int $errline
+     * @throws Exception
+     * @return void|boolean
+     */
     public function processErrorHandler( $errno, $errstr, $errfile, $errline ) {
 
-        if( $errno >= ER )
-            throw new Exception( $errstr, $errno );
+        if( $errno <= E_WARNING ) {
+
+            throw new Exception( $errno, $errstr, $errfile, $errline );
 
             /* Don't execute PHP internal error handler */
             return true;
+        }
     }
 
 }

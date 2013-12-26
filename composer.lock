@@ -3,8 +3,54 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "b53a30d2e2d754b8bca92b415a5ae37a",
+    "hash": "6fa09a5d6a20069566406b2f442626ad",
     "packages": [
+        {
+            "name": "mazelab/zendframework1-min",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mazelab/zendframework1-min.git",
+                "reference": "e145c052eafe3a73704ffcfe73f2d4e1db1054e7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mazelab/zendframework1-min/zipball/e145c052eafe3a73704ffcfe73f2d4e1db1054e7",
+                "reference": "e145c052eafe3a73704ffcfe73f2d4e1db1054e7",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.11"
+            },
+            "conflict": {
+                "zendframework/zendframework1": "<1.12"
+            },
+            "replace": {
+                "zend/zendframework": "1.*",
+                "zendframework/zendframework1": "1.12.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Zend": "library/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "include-path": [
+                "library/"
+            ],
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "Zend Framework 1 fork with minimum require_once and include_path",
+            "homepage": "https://github.com/mazelab/zendframework1-min",
+            "keywords": [
+                "ZF1",
+                "ZendFramework",
+                "zend"
+            ],
+            "time": "2013-11-26 04:08:21"
+        },
         {
             "name": "symfony/console",
             "version": "dev-master",
@@ -12,12 +58,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Console.git",
-                "reference": "b44aa6a612802bd0f60df09cea469522e0bf72ee"
+                "reference": "eded85f92af004e594f8a1df9fbd3ae6f1ba5cd7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Console/zipball/b44aa6a612802bd0f60df09cea469522e0bf72ee",
-                "reference": "b44aa6a612802bd0f60df09cea469522e0bf72ee",
+                "url": "https://api.github.com/repos/symfony/Console/zipball/eded85f92af004e594f8a1df9fbd3ae6f1ba5cd7",
+                "reference": "eded85f92af004e594f8a1df9fbd3ae6f1ba5cd7",
                 "shasum": ""
             },
             "require": {
@@ -56,7 +102,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "http://symfony.com",
-            "time": "2013-12-23 16:03:00"
+            "time": "2013-12-26 07:59:17"
         },
         {
             "name": "zendframework/zf1-extras",
@@ -79,6 +125,7 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "zendframework/zf1-extras": 20,
+        "mazelab/zendframework1-min": 20,
         "symfony/console": 20
     },
     "platform": [
