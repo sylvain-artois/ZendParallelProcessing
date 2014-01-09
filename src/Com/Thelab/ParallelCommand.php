@@ -20,7 +20,7 @@ class ParallelCommand extends Command {
     protected function configure() {
 
         $this
-            ->setName( 'parallel:do' )
+            ->setName( 'parallel:run' )
             ->setDescription( 'Let\'s do something in parallel' )
             ->addArgument(
                 'callable',
